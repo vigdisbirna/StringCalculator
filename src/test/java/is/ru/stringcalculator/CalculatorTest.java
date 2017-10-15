@@ -43,7 +43,7 @@ public class CalculatorTest {
 
 	@Test 
 	public void testDelimeter() {
-		assertEquals(10, Calculator.add("//;4;6"));
+		assertEquals(10, Calculator.add("//;\n4;6"));
 	}
 
 }
