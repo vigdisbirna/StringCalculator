@@ -9,7 +9,21 @@ public class Calculator {
 			return 0;
 		}
 
-		String[] temp = text.split("[,\\n]+");
+		String[] temp;
+
+		if(text.startsWith("//"))
+		{
+			int length = text.length();
+			String substring = text.substring(3,length);
+			String sign = text.substring(2,3);
+			temp = substring.split(sign);
+
+		}
+		else
+		{
+			temp = text.split("[,\\n]+");
+		}
+
 		String[] neg;
 		int sum = 0;
         
@@ -24,6 +38,7 @@ public class Calculator {
 
 		return sum(temp);
 	}
+
 
 	public static int sum(String[] temp)
 	{

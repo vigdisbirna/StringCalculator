@@ -41,4 +41,9 @@ public class CalculatorTest {
 		assertEquals(10, Calculator.add("10,1001")); 
 	}
 
+	@Test 
+	public void testDelimeter() {
+		assertEquals(10, Calculator.add("//;4;6"));
+	}
+
 }
