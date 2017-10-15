@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-10-15T19:14:09" hostname="DESKTOP-EBFP1M7" time="0.003">
+<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-10-15T20:02:41" hostname="DESKTOP-EBFP1M7" time="0.003">
   <properties/>
-  <testcase name="testSimpleAdd" classname="is.ru.stringcalculator.CalculatorTest" time="0.002"/>
+  <testcase name="testSimpleAdd" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
   <testcase name="testAdd" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testEmptyString" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="TestNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>

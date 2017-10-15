@@ -11,18 +11,35 @@ public class Calculator {
 
 		String[] temp = text.split("[,\\n]+");
 		String[] neg;
-		int countNeg = 0; 
 		int sum = 0;
         
-        for(int i = 0; i <temp.length; i++)
-        {
-        	if(Integer.parseInt(temp[i]) < 0)
-        		{
-        			countNeg++;
-        		}
-        } 
-
+        int countNeg = negativeNumbers(temp);
         neg = new String[countNeg];
+        fillNegArray(countNeg, temp, neg);
+
+        if(countNeg > 0)
+        {
+        	throwException(neg);
+        }
+
+		return sum(temp);
+	}
+
+	public static int sum(String[] temp)
+	{
+		int _sum = 0;
+		for(int i = 0; i < temp.length; i++)
+		{
+			_sum = Integer.parseInt(temp[i]) + _sum;
+		}
+
+		return _sum;
+	}
+
+	public static void fillNegArray(int countNeg, String[] temp, String[] neg)
+	{
+
+        
         int count = 0;
 
         for(int i = 0; i < temp.length; i++)
@@ -33,10 +50,25 @@ public class Calculator {
         			count++;
         		}
         }
+	}
 
-        if(countNeg > 0)
+	public static int negativeNumbers(String[] temp)
+	{
+		int countNeg = 0; 
+        for(int i = 0; i <temp.length; i++)
         {
-        	String error = "";
+        	if(Integer.parseInt(temp[i]) < 0)
+        		{
+        			countNeg++;
+        		}
+        } 
+
+        return countNeg;
+	}
+
+	public static void throwException(String[] neg)
+	{
+		String error = "";
 
         	for(int i = 0; i < neg.length; i++)
         	{
@@ -44,14 +76,5 @@ public class Calculator {
         	}
 
         	throw new RuntimeException("Negatives not allowed: " + error);
-        }
-
-
-        for(int i = 0; i < temp.length; i++)
-		{
-			sum = Integer.parseInt(temp[i]) + sum;
-		}
-
-		return sum;
 	}
 }
