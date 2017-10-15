@@ -30,7 +30,10 @@ public class Calculator {
 		int _sum = 0;
 		for(int i = 0; i < temp.length; i++)
 		{
-			_sum = Integer.parseInt(temp[i]) + _sum;
+			if(Integer.parseInt(temp[i]) <= 1000)
+			{
+				_sum = Integer.parseInt(temp[i]) + _sum;
+			}
 		}
 
 		return _sum;
