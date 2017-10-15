@@ -12,22 +12,12 @@ public class Calculator {
 		String[] temp = text.split(",");
 		int sum = 0;
         
-
-        if(temp.length == 1)
-        {
-        	return Integer.parseInt(temp[0]);
-        }
-
-        else if(temp.length == 2)
-        {
-        	return Integer.parseInt(temp[0]) + Integer.parseInt(temp[1]);
-        }
-
-		/*for(int i = 0; i < temp.length(); i++)
+        for(int i = 0; i < temp.length; i++)
 		{
-			sum = temp[i] + sum;
-		}*/
+			sum = Integer.parseInt(temp[i]) + sum;
+		}
 
 		return sum;
+
 	}
 }
