@@ -9,7 +9,7 @@ public class Calculator {
 			return 0;
 		}
 
-		String[] temp = text.split(",");
+		String[] temp = text.split("[,\\n]+");
 		int sum = 0;
         
         for(int i = 0; i < temp.length; i++)
